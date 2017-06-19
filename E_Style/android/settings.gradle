@@ -1,0 +1,3 @@
+rootProject.name = 'E_Style'
+
+include ':app'
