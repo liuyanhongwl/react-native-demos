@@ -1,0 +1,3 @@
+rootProject.name = 'H_TextInput'
+
+include ':app'
