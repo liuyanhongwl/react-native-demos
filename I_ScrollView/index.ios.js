@@ -20,7 +20,7 @@ export default class I_ScrollView extends Component {
     return (
       <ScrollView horizontal={false}
       onScroll={
-        event => {console.log(event.contentOffset)}
+        event => {console.log(event.nativeEvent.contentOffset.y)}
       }>
         <Text style={{fontSize:96}}>Scroll me plz</Text>
         <Image source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'}} style={{width: 193, height: 110}}/>
