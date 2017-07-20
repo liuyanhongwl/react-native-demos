@@ -3,46 +3,26 @@
  */
 
 import React, { Component } from 'react'
-import {
-  FlatList,
-  Text,
-  TouchableOpacity,
-  View
-} from  'react-native'
+import List from './Common/List'
 
 class AnimatedUse extends Component {
   render() {
     let data = [
       {
-        title: 'simple',
-        navigationScreen: ''
+        title: 'Simple',
+        onPress: () => {
+          this.props.navigation.navigate('Simple')
+        }
       },
-      {title: 'singleValueToMultiStyleProps'},
-      {title: 'multiAnimations'},
-      {title: 'event'}
+      {title: 'SingleValueToMultiStyleProps'},
+      {title: 'MultiAnimations'},
+      {title: 'Event'}
     ]
     return (
-      <FlatList
-        keyExtractor={(item, index) => index}
+      <List
         data={data}
-        renderItem={({item, index}) => (
-          <TouchableOpacity
-            style={{height: 44, justifyContent: 'center'}}
-            onPress={() => {
-              this.props.navigation.navigate(item.navigateScreen)
-            }}>
-            <Text>{index} {item.title}</Text>
-          </TouchableOpacity>
-        )}
-        ItemSeparatorComponent={SeparatorComponent}
       />
     )
-  }
-}
-
-class SeparatorComponent extends React.PureComponent {
-  render() {
-    return <View style={{ height: 0.5, backgroundColor: 'gray'}} />
   }
 }
 

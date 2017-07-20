@@ -6,6 +6,7 @@ import React, { Component } from 'react'
 import { StackNavigator } from  'react-navigation'
 import Main from './Main'
 import AnimatedUse from './AnimatedUse'
+import Simple from './Animated/Simple'
 
 const MainStack = StackNavigator({
   Main: {
@@ -13,6 +14,9 @@ const MainStack = StackNavigator({
   },
   AnimatedUse: {
     screen: AnimatedUse
+  },
+  Simple: {
+    screen: Simple
   }
 })
 
