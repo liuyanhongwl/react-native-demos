@@ -38,7 +38,10 @@ class Simple extends Component {
                    * */
                   Animated.timing(
                     this.state.fadeAnim,
-                    { toValue: 1 }
+                    {
+                      duration: 1000,
+                      toValue: 1
+                    }
                   ).start()
                 }} />
       </View>
